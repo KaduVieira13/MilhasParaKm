@@ -6,16 +6,19 @@ namespace MilhasParaKm
     {
         static void Main(string[] args)
         {
-             double milhas;
-            double km = 1.609;
+            string usuario;
+            double km = 1.609; 
+            double resultado;
+            double milhas;
 
             Console.WriteLine("Digite o Valor em Milhas: ");
-            milhas = double.Parse(Console.ReadLine());
-
+            usuario = Console.ReadLine();
+            milhas = Convert.ToDouble(usuario);
+            resultado = milhas * km;
             Console.WriteLine("O resultado da conversão de milhas para Km é: ");
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine();
-            Console.WriteLine($"{milhas * km} Quilômetros. ");
+            Console.WriteLine($"{resultado } Quilômetros. ");
             Console.ResetColor();
             Console.Write("\n");
             Console.WriteLine("Pressione uma tecla para sair!");
